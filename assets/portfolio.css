@@ -1,0 +1,109 @@
+/* fde-portfolio layer -- audience-lens visibility + portfolio components, over site.css.
+ * Reuses tokens/components/site cockpit chrome. Light "Daybreak" default. No em/en-dashes. */
+
+/* ---------- audience lens visibility (html-prefixed to outrank .stack display:grid) ---------- */
+html .lens-recruiter, html .lens-hiring-manager, html .lens-tech-interviewer, html .lens-customer-founder { display: none; }
+html[data-persona="recruiter"]        .lens-recruiter        { display: grid; }
+html[data-persona="hiring-manager"]   .lens-hiring-manager   { display: grid; }
+html[data-persona="tech-interviewer"] .lens-tech-interviewer { display: grid; }
+html[data-persona="customer-founder"] .lens-customer-founder { display: grid; }
+html:not([data-persona]) .lens-recruiter { display: grid; }
+
+/* ---------- hero ---------- */
+.phero { position: relative; overflow: hidden; padding: var(--space-16) var(--space-10) var(--space-12);
+  border-radius: var(--radius-lg); border: 1px solid var(--line); background: var(--surface-1); box-shadow: var(--elev), var(--edge-hi); }
+.phero #vfield { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; opacity: 0.65; pointer-events: none; }
+.phero .pinner { position: relative; z-index: 1; }
+.phero h1 { font-size: var(--text-display-s); letter-spacing: -0.03em; max-width: 20ch; }
+.phero .subhead { font-size: var(--text-lg); color: var(--color-ink-soft); max-width: 60ch; margin-top: var(--space-5); }
+.phero .lead { font-size: var(--text-base); color: var(--color-ink-mute); max-width: 62ch; margin-top: var(--space-4); }
+.phero .nameline { display: flex; align-items: baseline; gap: var(--space-3); flex-wrap: wrap; margin-bottom: var(--space-3); }
+.phero .nameline .loc { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--ink-faint); letter-spacing: 0.1em; text-transform: uppercase; }
+
+.linkrow { display: flex; gap: var(--space-3); flex-wrap: wrap; margin-top: var(--space-8); align-items: center; }
+.availpill { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-body); font-weight: 600; font-size: var(--text-xs);
+  padding: 0.32rem 0.8rem; border-radius: var(--radius-pill); color: var(--color-accent-3);
+  border: 1px solid color-mix(in oklch, var(--color-accent-3) 40%, transparent); background: color-mix(in oklch, var(--color-accent-3) 9%, transparent); }
+.availpill .light { width: 8px; height: 8px; }
+
+/* ---------- proof stats ---------- */
+.proofrow { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--space-4); }
+.proofstat { padding: var(--space-5); border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface-2); box-shadow: var(--edge-hi); }
+.proofstat .n { font-family: var(--font-display); font-weight: 600; font-size: 1.7rem; letter-spacing: -0.02em; color: var(--color-ink); line-height: 1.05; }
+.proofstat .l { margin-top: var(--space-2); font-size: var(--text-sm); color: var(--color-ink-mute); }
+
+/* ---------- project cards ---------- */
+.projcard { display: flex; flex-direction: column; gap: var(--space-3); min-height: 200px; text-decoration: none; }
+.projcard .pj-top { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); }
+.projcard .pj-name { font-family: var(--font-display); font-weight: 600; font-size: 1.1rem; color: var(--color-ink); letter-spacing: -0.01em; }
+.projcard .pj-frame { font-size: var(--text-sm); color: var(--color-ink-soft); line-height: 1.5; flex: 1; }
+.projcard .pj-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.projcard .pj-foot { display: flex; align-items: center; gap: var(--space-3); margin-top: auto; font-family: var(--font-mono); font-size: var(--text-xs); color: var(--ink-faint); }
+.projcard .pj-foot a { color: var(--color-accent); text-decoration: none; }
+.privbadge { font-family: var(--font-body); font-weight: 600; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--color-accent-2); border: 1px solid color-mix(in oklch, var(--color-accent-2) 40%, transparent);
+  background: color-mix(in oklch, var(--color-accent-2) 9%, transparent); padding: 0.16rem 0.5rem; border-radius: var(--radius-pill); }
+
+/* ---------- experience timeline ---------- */
+.timeline { display: grid; gap: var(--space-4); }
+.exprow { border-left: 2px solid var(--line); padding: 0 0 var(--space-2) var(--space-6); position: relative; }
+.exprow::before { content: ""; position: absolute; left: -6px; top: 4px; width: 10px; height: 10px; border-radius: 50%; background: var(--color-accent); box-shadow: 0 0 0 4px var(--surface-0); }
+.exprow .ex-h { display: flex; align-items: baseline; gap: var(--space-3); flex-wrap: wrap; }
+.exprow .ex-role { font-family: var(--font-display); font-weight: 600; color: var(--color-ink); font-size: 1.02rem; }
+.exprow .ex-org { color: var(--color-accent); font-weight: 500; }
+.exprow .ex-period { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--ink-faint); margin-left: auto; }
+.exprow ul { list-style: none; padding: 0; margin: var(--space-3) 0 0; display: grid; gap: var(--space-2); }
+.exprow li { padding-left: 1.4rem; position: relative; font-size: var(--text-sm); color: var(--color-ink-soft); }
+.exprow li::before { content: "->"; position: absolute; left: 0; color: var(--color-accent); font-family: var(--font-mono); }
+
+/* ---------- stack matrix ---------- */
+.stackmatrix { display: grid; gap: var(--space-4); }
+.stackrow { display: grid; grid-template-columns: 140px 1fr; gap: var(--space-4); align-items: start; }
+@media (max-width: 640px){ .stackrow { grid-template-columns: 1fr; gap: var(--space-2); } }
+.stackrow .sk-cat { font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-ink-mute); padding-top: 4px; }
+.stackrow .sk-items { display: flex; gap: 6px; flex-wrap: wrap; }
+
+/* ---------- how I work (customer-founder) ---------- */
+.howiwork { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
+@media (max-width: 760px){ .howiwork { grid-template-columns: 1fr; } }
+.step { padding: var(--space-5); border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface-2); box-shadow: var(--edge-hi); }
+.step .sn { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--color-accent); letter-spacing: 0.12em; }
+.step .sh { font-family: var(--font-display); font-weight: 600; color: var(--color-ink); font-size: 1.05rem; margin: var(--space-2) 0 var(--space-2); }
+.step p { font-size: var(--text-sm); color: var(--color-ink-soft); }
+
+/* ---------- recently shipped strip ---------- */
+.actstrip { display: grid; gap: 2px; }
+.actitem { display: grid; grid-template-columns: auto 1fr auto; gap: var(--space-3); align-items: center; padding: 0.5rem var(--space-3);
+  border-radius: 8px; border: 1px solid transparent; text-decoration: none; color: inherit; transition: background var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out); }
+.actitem:hover { background: var(--surface-1); border-color: var(--line-soft); }
+.actitem .a-type { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.12rem 0.45rem; border-radius: var(--radius-pill); }
+.actitem .a-type.commit { color: var(--color-accent); border: 1px solid color-mix(in oklch, var(--color-accent) 35%, transparent); }
+.actitem .a-type.release { color: var(--color-accent-3); border: 1px solid color-mix(in oklch, var(--color-accent-3) 35%, transparent); }
+.actitem .a-title { font-size: var(--text-sm); color: var(--color-ink-soft); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.actitem .a-meta { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--ink-faint); white-space: nowrap; }
+
+/* ---------- skills ---------- */
+.skillgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-2) var(--space-5); }
+.skillgrid div { font-size: var(--text-sm); color: var(--color-ink-soft); padding-left: 1.3rem; position: relative; }
+.skillgrid div::before { content: "+"; position: absolute; left: 0; color: var(--color-accent); font-family: var(--font-mono); }
+
+/* ---------- contact band ---------- */
+.contactband { text-align: center; padding: var(--space-12) var(--space-6); border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--surface-1); box-shadow: var(--elev), var(--edge-hi); }
+.contactband h2 { font-size: var(--text-2xl); }
+.contactband p { color: var(--color-ink-soft); margin: var(--space-3) auto 0; }
+.contactband .linkrow { justify-content: center; }
+
+.detail-sec { display: grid; gap: var(--space-3); }
+
+/* ---------- clients credibility strip ---------- */
+.clientstrip { display: flex; align-items: baseline; gap: var(--space-4); flex-wrap: wrap; padding: var(--space-4) var(--space-5);
+  border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface-2); box-shadow: var(--edge-hi); }
+.clientstrip .cs-label { font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-ink-mute); white-space: nowrap; }
+.clientstrip .cs-names { font-family: var(--font-display); font-weight: 500; color: var(--color-ink); font-size: var(--text-base); }
+
+/* ---------- honest rough-edge note ---------- */
+.honestnote { padding: var(--space-5) var(--space-6); border: 1px solid var(--line); border-left: 3px solid var(--color-accent-2);
+  border-radius: var(--radius); background: var(--surface-2); box-shadow: var(--edge-hi); }
+.honestnote .eyebrow { color: var(--color-accent-2); }
+.honestnote p { font-size: var(--text-base); color: var(--color-ink-soft); margin-top: var(--space-2); max-width: 72ch; }
+.honestnote.compact p { font-size: var(--text-sm); }
