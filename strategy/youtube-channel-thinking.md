@@ -1,7 +1,15 @@
 # YouTube / personal brand — first pass
 
+> **Superseded by [`forward-deployed/04-decision/`](forward-deployed/). Kept for the record.**
+>
+> This was the pre-debate thinking. The §4 recommendation here — C2 (Demo Tax) as
+> flagship — **did not survive the weighted rubric in stage 03**. Once buyer proximity
+> was weighted properly against the consulting-first goal, C3 (Regulated) scored
+> higher (435 vs 405), and the actual decision became a three-series funnel rather
+> than a single flagship. See `forward-deployed/03-debate/02-scorecard.md`.
+>
 > Holding pen. This is **not** site content — do not merge `strategy/` into `gh-pages`.
-> It's the seed for a separate ICM repo. Written 2026-07-30.
+> Written 2026-07-30.
 
 ---
 
