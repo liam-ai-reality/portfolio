@@ -1,15 +1,24 @@
-# YouTube / personal brand — first pass
+# First pass — the thinking before the debate
 
-> **Superseded by [`forward-deployed/04-decision/`](forward-deployed/). Kept for the record.**
+> **Superseded by [`../04-decision/`](../04-decision/). Kept as the record of what the
+> reasoning looked like before the rubric.**
 >
-> This was the pre-debate thinking. The §4 recommendation here — C2 (Demo Tax) as
-> flagship — **did not survive the weighted rubric in stage 03**. Once buyer proximity
-> was weighted properly against the consulting-first goal, C3 (Regulated) scored
-> higher (435 vs 405), and the actual decision became a three-series funnel rather
-> than a single flagship. See `forward-deployed/03-debate/02-scorecard.md`.
+> Written 2026-07-30, in the portfolio repo, before any of the staged work existed.
+> The §4 recommendation here — **C2 (Demo Tax) as flagship** — did not survive the
+> weighted rubric in this stage. Once buyer proximity was weighted against the
+> consulting-first goal, **C3 (Regulated) scored higher, 435 to 405**, and the decision
+> became a three-series funnel rather than a single flagship. See
+> [`02-scorecard.md`](02-scorecard.md).
 >
-> Holding pen. This is **not** site content — do not merge `strategy/` into `gh-pages`.
-> Written 2026-07-30.
+> Two other things here are now known to be wrong, both corrected by
+> [ADR-006](../04-decision/ADR-006-regulated-series-recut.md): the August 2026 GPAI
+> clock (GPAI applied from August 2025, and the Annex III date moved to December
+> 2027), and the claim that an Annex IV template is a strong bridge asset.
+>
+> Left unedited below. The point of keeping it is to be able to see what changed and
+> why — a decision trail that only records the winning answer isn't a trail.
+>
+> §9 proposed an ICM repo. That repo is this one.
 
 ---
 
