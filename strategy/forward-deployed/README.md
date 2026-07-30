@@ -16,7 +16,7 @@ stop the decision being relitigated every time a video underperforms.
 | `01-market/` | July 2026 market read, niche map, demand-signal method, format economics | Written |
 | `02-candidates/` | Six channel concepts, each to an identical schema | Written |
 | `03-debate/` | Weighted rubric, bull/bear per candidate, scorecard, red team | Written |
-| `04-decision/` | ADRs 001–005 — the decision and why the losers lost | Written |
+| `04-decision/` | ADRs 001–006 — the decision, why the losers lost, and one dated correction | Written |
 | `05-format/` | Series bible, episode template, title/thumbnail system, visual identity | Written |
 | `06-pipeline/` | Production runbook, tooling, publish checklist | Written |
 | `07-backlog/` | Season 1 fully specified, plus a ranked idea backlog | Written |
@@ -40,6 +40,10 @@ If you read three files, read these:
 1. [`03-debate/02-scorecard.md`](03-debate/02-scorecard.md) — how the six candidates actually scored
 2. [`04-decision/ADR-002-series-portfolio.md`](04-decision/ADR-002-series-portfolio.md) — why the rubric winner isn't the whole answer
 3. [`07-backlog/season-01.md`](07-backlog/season-01.md) — the six episodes to make
+
+And if you read a fourth: [`01-market/signal-regulated-2026-07-30.md`](01-market/signal-regulated-2026-07-30.md)
+— the first demand run, which found the law had changed three days earlier and recut
+two of the six episodes.
 
 ## Working in this repo
 

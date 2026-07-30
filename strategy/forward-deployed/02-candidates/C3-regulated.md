@@ -1,5 +1,12 @@
 # C3 — Regulated: the EU AI Act as engineering
 
+> **Addendum 2026-07-30.** The "August 2026 GPAI obligations" clock cited under
+> *Discovery mechanism* was wrong — GPAI applied from August 2025, and the Annex III
+> high-risk deadline moved to December 2027 under Regulation (EU) 2026/1744. The
+> live clock is now **Article 50 transparency, 2 August 2026**. The *Bridge asset*
+> section also overstates: Annex IV and FRIA templates are commodities, freely
+> available from several vendors. Spec left unedited as the record; see ADR-006.
+
 ## Premise
 The EU AI Act treated as a software problem rather than a legal one. Risk
 classification under Articles 5/6 and Annex III, the FRIA workflow, Annex IV

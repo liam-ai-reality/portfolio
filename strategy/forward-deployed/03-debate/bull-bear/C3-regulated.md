@@ -1,5 +1,16 @@
 # C3 — Regulated: bull and bear
 
+> **Addendum 2026-07-30 — two claims below were wrong.** The bull case's "there is a
+> clock — the August 2026 GPAI obligations" is incorrect twice: GPAI obligations have
+> applied since **2 August 2025**, and the August 2026 date that did matter (Annex III
+> high-risk) moved to **2 December 2027** when Regulation (EU) 2026/1744 entered into
+> force on 27 July 2026. The bear case's point about regulatory decay was
+> correspondingly understated.
+>
+> The argued text below is left unedited — it is the record of the debate as it was
+> held. See `01-market/signal-regulated-2026-07-30.md` and
+> `04-decision/ADR-006-regulated-series-recut.md` for the correction and what changed.
+
 ## Bull
 
 **The buyer proximity is not merely high, it is qualitatively different.** Every

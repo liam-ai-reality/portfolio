@@ -12,6 +12,12 @@ recommendation is the latter regardless of budget — Google volume is a poor pr
 for YouTube demand, and for the low-volume B2B terms that matter here it is
 frequently reported as zero even where real intent exists.
 
+**Second blocker, found 2026-07-30.** Steps 1, 2 and 4 below cannot be run from the
+Claude Code session environment either: its network policy denies all Google and
+YouTube hosts at the proxy gateway, and the pre-installed Chromium egresses through
+the same gateway. **Run those three steps manually from an ordinary browser** — about
+ten minutes per term. Steps 3 and 5 can be automated from the session.
+
 ## The YouTube-native method
 
 Run this per candidate topic before it enters `07-backlog/`. It costs about ten
@@ -50,10 +56,20 @@ labelled as such in the backlog.
 
 ## Seed terms to run first
 
-Regulated series — expect low volume, high intent:
-`eu ai act technical documentation` · `annex iv documentation` ·
-`eu ai act high risk classification` · `gpai obligations august 2026` ·
-`fria fundamental rights impact assessment` · `ai act post market monitoring`
+**Regulated — revised 2026-07-30 after the first run
+([results](signal-regulated-2026-07-30.md), [ADR-006](../04-decision/ADR-006-regulated-series-recut.md)).**
+Expect low volume, high intent.
+
+Promoted: `ai act post market monitoring` · `article 72 post market monitoring plan` ·
+`eu ai act article 50 transparency` · `ai generated content machine readable marking` ·
+`ai watermarking c2pa provenance implementation` · `annex iv documentation automation`
+
+Kept, reframed: `eu ai act high risk classification` · `article 6(3) derogation`
+
+Demoted: `annex iv template` — commoditised, five vendors give one away free.
+Dropped: `gpai obligations august 2026` — factually wrong, GPAI applied from
+**2 August 2025**. `fria template` — narrow public-sector buyer set, and the AI
+Office's official template is still pending.
 
 Pilot to Production — expect medium volume, medium-high intent:
 `ai pilot to production` · `multi tenant ai architecture` ·

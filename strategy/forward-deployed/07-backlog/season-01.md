@@ -39,19 +39,28 @@ buyer already has. Highest conversion potential in the season.
 
 ---
 
-## EP03 — "The EU AI Act, for engineers who have to ship in August"
-**Regulated** · conversion · target 16 min
+## EP03 — "The AI Act deadline everyone thinks moved, and the one that didn't"
+**Regulated** · conversion · target 16 min · **replaces the original EP03 per ADR-006**
 
-Article 5/6 and Annex III classification, done as a decision procedure rather than a
-lecture. Walk three realistic systems through it and reach three different answers.
-Boundary stated up front: engineer, not lawyer.
+Regulation (EU) 2026/1744 entered into force on 27 July 2026. Annex III high-risk
+went to December 2027 — so most teams have concluded they have another year.
+**Article 50 transparency still applies on 2 August 2026**, it covers far more
+companies than Annex III ever did, and it carries penalties up to €15M or 3% of
+turnover. Then build the thing it actually requires: machine-readable marking of
+generated content — metadata, provenance, audit log.
 
-*Hook:* "Most teams get their risk classification wrong in the same two places."
-*Why third:* the August GPAI deadline gives it urgency now; landing it after two
-episodes means it isn't the channel's first impression.
+*Hook:* "Three days ago the EU moved an AI Act deadline. It wasn't the one you're
+about to miss."
+*Why this replaces the original:* the original was anchored on an August 2026
+high-risk deadline that no longer exists, and on GPAI obligations that have been in
+force since **August 2025**. Both were wrong.
+*Why third, and why urgently:* the commentary is currently all law-firm blogs from
+the past fortnight. An engineering read is available now and won't be in a month.
 *Receipts:* R12.
-*Bridge:* the risk-classification decision tree.
-*Note:* script harder than anything else this season. Accuracy is asymmetric.
+*Bridge:* an Article 50 applicability checklist — does this system need marking, and
+what kind.
+*Note:* script harder than anything else this season, and put the date on screen.
+Accuracy is asymmetric and this area is moving fast.
 *Not judged on views* (ADR-005).
 
 ---
@@ -68,18 +77,28 @@ leak. Then the isolation patterns and what each costs in complexity and money.
 
 ---
 
-## EP05 — "Writing Annex IV technical documentation without hiring a consultant"
-**Regulated** · conversion · target 14 min
+## EP05 — "Post-market monitoring is just observability with a legal deadline"
+**Regulated** × **Pilot to Production** · conversion · target 14 min ·
+**replaces the original EP05 per ADR-006**
 
-The most directly commercial episode of the season, and deliberately generous: give
-away the template that a consultancy would charge for. Someone who downloads it has
-a live obligation and no way to meet it.
+Article 72 requires providers of high-risk systems to systematically collect and
+analyse performance data across the system's whole lifetime, on a documented plan
+that forms part of the technical documentation. That is not a compliance artefact,
+it is an observability system — and the hard part is that the thing being monitored
+is non-deterministic. Build it: what to log when output isn't repeatable, what drift
+looks like, what an auditor will ask for.
 
-*Hook:* what Annex IV actually demands, in one sentence, followed by how few teams have it.
-*Receipts:* R12 — the strongest single differentiator in the inventory.
-*Bridge:* the Annex IV template. **The best bridge asset in the repo.**
-*Note:* the apparent paradox — giving away the deliverable — is the point. It
-qualifies the lead and demonstrates the capability simultaneously.
+*Hook:* "The EU wrote an observability requirement into law and called it something else."
+*Why this replaces the original:* Annex IV templates are a commodity — five vendors
+give them away free — and the obligation behind them moved to December 2027. Article
+72 had the thinnest supply of any term tested and the strongest buyer test.
+*Why it matters strategically:* this is where Regulated and Pilot to Production
+converge. One episode serves both tiers, which is the cheapest possible coverage.
+*Receipts:* R12, R13.
+*Bridge:* a post-market monitoring plan skeleton, generated from pipeline metadata
+rather than filled in by hand.
+*Note:* a Commission implementing act laying down the PMM plan template was due by
+2 February 2026. **Verify whether it landed before scripting.**
 
 ---
 
@@ -105,10 +124,15 @@ is the episode most likely to be shared by someone senior.
 |---:|---|---|---:|
 | 01 | Demo Tax | Reach | 15–20 |
 | 02 | Pilot to Production | Conversion | 8 |
-| 03 | Regulated | Conversion | 8 |
+| 03 | Regulated (Art 50) | Conversion | 8 |
 | 04 | Pilot to Production | Conversion | 8 |
-| 05 | Regulated | Conversion | 7 |
+| 05 | Regulated × Pilot (Art 72) | Conversion | 7 |
 | 06 | Organisational | Both | 6 |
+
+EP03 and EP05 were recut on 2026-07-30 after the demand signal run
+([ADR-006](../04-decision/ADR-006-regulated-series-recut.md)). **EP03 is time-critical**
+— Article 50 applies 2 August 2026 and the engineering-register commentary window is
+open now.
 
 **~55 hours over three months.** That is the real price. Decide it is worth it now,
 not in week six.
