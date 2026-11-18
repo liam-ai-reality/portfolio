@@ -1,0 +1,37 @@
+/* reality-now boot intro -- per-page cinematic loader (harvested from realityos-vision).
+ * The repo/system list lights up in sequence while a load bar fills, then it lifts away.
+ * Fully behind prefers-reduced-motion (boot.js removes #boot immediately). No em/en-dashes. */
+
+#boot { position: fixed; inset: 0; z-index: 200; display: grid; place-items: center; background: var(--surface-0);
+  transition: opacity 700ms var(--ease-cine), transform 700ms var(--ease-cine); }
+#boot.done { opacity: 0; transform: scale(1.03); pointer-events: none; }
+#boot::before { content: ""; position: absolute; inset: 0;
+  background: radial-gradient(50% 40% at 50% 42%, var(--bloom-a), transparent 70%);
+  animation: bloomDrift 8s var(--ease-in-out) infinite alternate; }
+
+.boot-core { position: relative; text-align: center; padding-inline: var(--space-6); }
+.boot-mark { font-family: var(--font-display); font-weight: 700; font-size: clamp(2.4rem, 7vw, 4rem);
+  letter-spacing: 0.04em; color: var(--color-ink); opacity: 0; animation: bootMark 900ms var(--ease-cine) 120ms forwards; }
+.boot-mark b { color: var(--color-accent); }
+@keyframes bootMark { from { opacity: 0; letter-spacing: 0.34em; filter: blur(6px); } to { opacity: 1; letter-spacing: 0.04em; filter: none; } }
+
+.boot-sub { font-family: var(--font-body); text-transform: uppercase; letter-spacing: 0.3em; font-size: 0.7rem;
+  color: var(--ink-faint); margin-top: var(--space-3); opacity: 0; animation: fadeUp 600ms var(--ease-out) 520ms forwards; }
+
+.boot-sys { list-style: none; display: flex; gap: var(--space-3); flex-wrap: wrap; justify-content: center; margin: var(--space-8) 0 var(--space-6); }
+.boot-sys li { font-family: var(--font-body); font-size: 0.74rem; color: var(--ink-faint); display: inline-flex; align-items: center; gap: 7px;
+  opacity: 0.4; transition: color 300ms var(--ease-out), opacity 300ms var(--ease-out); }
+.boot-sys li::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; box-shadow: none; transition: box-shadow 300ms var(--ease-out); }
+.boot-sys li.on { color: var(--color-accent); opacity: 1; }
+.boot-sys li.on::before { box-shadow: 0 0 10px var(--color-accent); }
+
+.boot-line { width: min(320px, 60vw); height: 2px; border-radius: 2px; background: var(--surface-3); margin: 0 auto; overflow: hidden; }
+.boot-line > span { display: block; height: 100%; width: 0;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-2)); transition: width 1.4s var(--ease-cine); }
+.boot-skip { margin-top: var(--space-10); font-family: var(--font-body); font-size: var(--text-xs); color: var(--ink-faint);
+  opacity: 0; animation: fadeUp 500ms var(--ease-out) 900ms forwards; }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes bloomDrift { from { transform: translate3d(-2%, -1%, 0) scale(1); } to { transform: translate3d(2%, 1%, 0) scale(1.06); } }
+
+@media (prefers-reduced-motion: reduce) { #boot { display: none; } }
